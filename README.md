@@ -1,4 +1,4 @@
-# 使用canvas渲染的视频混剪播放器
+# 使用canvas渲染的视频混剪播放器,无缝拼接不同的视频源
 
 ## ![说明文档](https://img.shields.io/badge/说明文档-v1.0.0-brightgreen.svg)
 ## 安装canvas-video-player 

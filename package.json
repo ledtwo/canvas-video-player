@@ -2,7 +2,7 @@
   "name": "canvas-video-player",
   "version": "1.0.0",
   "private": false,
-  "description": "使用canvas渲染的视频混剪播放器",
+  "description": "使用canvas渲染的视频混剪播放器,无缝拼接不同的视频源",
   "author": "magicscript@163.com|ledtwo",
   "main": "lib/canvas-player.umd.min.js",
   "scripts": {
@@ -12,8 +12,9 @@
   },
   "keywords": [
     "video",
-    "canvas-player",
-    "canvas"
+    "video-player",
+    "canvas",
+    "canvas-player"
   ],
   "repository": {
     "type": "git",
