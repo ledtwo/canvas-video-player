@@ -1,6 +1,6 @@
 {
   "name": "canvas-video-player",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "private": false,
   "description": "使用canvas渲染的视频混剪播放器",
   "author": "magicscript@163.com|ledtwo",
@@ -15,6 +15,10 @@
     "canvas-player",
     "canvas"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ledtwo/canvas-video-player.git"
+  },
   "dependencies": {
     "core-js": "^3.6.5",
     "less-loader": "6.0.0",
