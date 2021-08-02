@@ -1,4 +1,4 @@
-# canvas-video-player 使用canvas渲染的视频混剪播放器
+# 使用canvas渲染的视频混剪播放器
 
 ## 安装
 ```
