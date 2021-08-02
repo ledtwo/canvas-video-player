@@ -1,0 +1,51 @@
+{
+  "name": "canvas-video-player",
+  "version": "0.1.2",
+  "private": false,
+  "description": "使用canvas渲染的视频混剪播放器",
+  "author": "magicscript@163.com|ledtwo",
+  "main": "lib/canvas-player.umd.min.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name canvas-player --dest lib ./src/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "keywords": [
+    "video",
+    "canvas-player",
+    "canvas"
+  ],
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "less-loader": "6.0.0",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
