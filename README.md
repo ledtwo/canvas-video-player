@@ -1,6 +1,12 @@
 # 使用canvas渲染的视频混剪播放器,无缝拼接不同的视频源
 
-## ![说明文档](https://img.shields.io/badge/说明文档-v1.0.0-brightgreen.svg)
+## ![说明文档](https://img.shields.io/badge/说明文档-v1.0.3-brightgreen.svg)
+
+## 效果预览
+
+预览地址： http://canvas-video.epochy.cn
+
+![说明文档](http://canvas-video.epochy.cn/img/preview.png)
 ## 安装canvas-video-player 
 ```
 npm i canvas-video-player
@@ -70,6 +76,7 @@ export default {
   },
   methods:{
     play(){
+      // 不传自定义数据，可以查看播放器的默认效果
       this.$canvasVideoPlayer(this.list)
     }
   }
@@ -77,4 +84,4 @@ export default {
 </script>
 ```
 
->创造不易，喜欢点个小星星 (*^▽^*)
+>开源不易，喜欢助我点个小星星 (*^▽^*)
