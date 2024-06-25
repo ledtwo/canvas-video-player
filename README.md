@@ -2,8 +2,9 @@
 
 ## ![说明文档](https://img.shields.io/badge/说明文档-v1.0.3-brightgreen.svg)
 
+预览地址：http://canvas-v.epochy.cn/
 
-![说明文档](http://canvas-video.epochy.cn/img/preview.png)
+![说明文档](http://canvas-v.epochy.cn/img/preview.png)
 ## 安装canvas-video-player 
 ```
 npm i canvas-video-player
