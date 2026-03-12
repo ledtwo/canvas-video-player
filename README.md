@@ -1,85 +1,91 @@
-# 使用canvas渲染的视频混剪播放器,无缝拼接不同的视频源
+# Canvas Video Player 🎬
 
-## ![说明文档](https://img.shields.io/badge/说明文档-v1.0.3-brightgreen.svg)
+![npm](https://img.shields.io/npm/v/canvas-video-player)
+![license](https://img.shields.io/github/license/ledtwo/canvas-video-player)
+![stars](https://img.shields.io/github/stars/ledtwo/canvas-video-player?style=social)
 
-预览地址：http://canvas-v.epochy.cn/
+A lightweight, seamless video mashup player rendered via `<canvas>`. Designed specifically for multi-video source splicing, short video sequence playback, and lightweight video preview scenarios on the Web.
 
-![说明文档](http://canvas-v.epochy.cn/img/preview.png)
-## 安装canvas-video-player 
-```
-npm i canvas-video-player
-//or
+## ✨ Core Features
+
+* **Seamless Mashup Experience**: Say goodbye to the black screens, stuttering, and loading delays common when switching between traditional `<video>` tags. By drawing the underlying frames onto a Canvas, it achieves a truly seamless transition.
+* **Precise Fragment Clipping**: Supports configuring independent playback periods (`start` / `end`) for each video source, rendering specific video segments exactly as needed.
+* **Customizable Watermarks**: Built-in logo overlay functionality allows you to set the watermark position (e.g., top-left, bottom-right) independently for different video sources.
+* **Minimalist API Design**: A highly encapsulated plugin approach. No need to mount cluttered DOM elements in your templates—invoke the player on the front end with just one line of code.
+* **High-Performance Rendering**: Directly manipulates the Canvas to draw video streams, ensuring silky-smooth visual transitions.
+
+## 🚀 Live Demo
+
+Experience it online: [http://canvas-v.epochy.cn/](http://canvas-v.epochy.cn/)
+
+## 📦 Installation
+
+You can install it via npm or yarn:
+
+```bash
+npm install canvas-video-player
+# OR
 yarn add canvas-video-player
-```
+🛠️ Quick Start
+The current version is deeply optimized for the Vue 2.x environment.
 
-## 使用方式
+1. Global Registration (main.js)
+JavaScript
+import Vue from 'vue';
+import canvasPlayer from "canvas-video-player";
 
-在Vue2.x项目中使用，首先需要在main.js中引入、全局注册
-```
-import canvasPlayer from "canvas-video-player"
+Vue.use(canvasPlayer);
+2. In-Component Invocation
+Call the player directly via the $canvasVideoPlayer method without intruding on your existing HTML structure.
 
-Vue.use(canvasPlayer)
-```
-在要使用的组件中，采用API的方式调用
-例如：
-```
+代码段
 <template>
   <div id="app">
-    <button @click="play">我是视频播放器</button>
+    <button @click="playVideo">▶️ Play Mashup Sequence</button>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'App',
-   data() {
+  data() {
     return {
-      list: [
+      playlist: [
         {
-          url: '**视频地址1**',
-          // 视频的尺寸
-          width: 1080,
-          height: 1920,
-          // 摆放logo的位置
-          logoPosition: {
-            x: 'left',
-            y: 'top',
-          },
-          // 播放截取的时段
-          playPoint: {
-            end: '3.120000',
-            start: '0',
-          },
+          url: '[https://example.com/video1.mp4](https://example.com/video1.mp4)',
+          width: 1080, // Canvas width for the video
+          height: 1920, // Canvas height for the video
+          logoPosition: { x: 'left', y: 'top' },
+          playPoint: { start: '0', end: '3.120000' } // Play only the first 3.12 seconds
         },
         {
-          url: '**视频地址2**',
-          // 视频的尺寸
+          url: '[https://example.com/video2.mp4](https://example.com/video2.mp4)',
           width: 1080,
           height: 1920,
-          // 摆放logo的位置
-          logoPosition: {
-            x: 'left',
-            y: 'top',
-          },
-          // 播放截取的时段
-          playPoint: {
-            end: '3.120000',
-            start: '0',
-          },
-        },
-        //...不限制视频个数，无限多
-      ],
+          logoPosition: { x: 'right', y: 'bottom' },
+          playPoint: { start: '1.5', end: '5.0' } // Continue playing from 1.5 seconds
+        }
+        // Supports an unlimited number of video fragments
+      ]
     }
   },
-  methods:{
-    play(){
-      // 不传自定义数据，可以查看播放器的默认效果
-      this.$canvasVideoPlayer(this.list)
+  methods: {
+    playVideo() {
+      // Pass the playlist to invoke the player
+      this.$canvasVideoPlayer(this.playlist);
     }
   }
 }
 </script>
-```
 
->喜欢点个小星星 (*^▽^*)
+🗺️ Roadmap
+[x] Deep plugin support for Vue 2.x
+
+[ ] Provide a pure Vanilla JS core library independent of any framework
+
+[ ] Expand support for modern frameworks (e.g., React Hooks / Component ecosystem compatibility)
+
+[ ] Add more video transition effects (Fade, Wipe, etc.)
+
+📄 License
+MIT License
