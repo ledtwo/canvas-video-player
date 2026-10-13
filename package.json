@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "private": false,
   "description": "使用canvas渲染的视频混剪播放器,无缝拼接不同的视频源",
-  "author": "magicscript@163.com|ledtwo",
+  "author": "ledtwo",
   "main": "lib/canvas-player.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
